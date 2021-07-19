@@ -37,7 +37,7 @@ gridsz = 1; %no. of gridpoints per segment
 dim = 6; %chain of 6 units
 
 %coupling params
-little_gamma = [1, 10, logspace(2,3,4), 10^4, 10^4.4472]
+little_gamma = [1, 10, logspace(2,3,4), 10^4, 10^4.4472];
 
 dt = t_n/10; 
 
@@ -140,6 +140,7 @@ while abs(wvln - true_wvln)>5*10^-2 && no_runs < 20
     no_runs = no_runs+1;
 end
 
+return
 %loop over rest of gammas to show gait adaptation
 for jj = 2:size(little_gamma,2)
     CN = (3.4*1e-9)*little_gamma(jj);

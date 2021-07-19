@@ -229,18 +229,20 @@ ylabel({'phase', 'difference \phi'}); ylim([0.5, 1]);
 xlim([eps_gaps(end), eps_gaps(1)]);
 set(gca,'FontSize',30); 
 
-subplot(2,1,2); semilogx(eps_gaps,wvlns,'bo',...
+subplot(2,1,2); loglog(eps_gaps,wvlns,'bo',...
     'Markersize',20,'LineWidth',4.0); hold on;
 xlabel('gap-junction coupling strength \epsilon_g');
 ylabel({'wavelength', '(\lambda/L)'});
-semilogx(eps_gaps,wvlns_full,'rs',...
+loglog(eps_gaps,wvlns_full,'rs',...
     'Markersize',15, 'MarkerFaceColor', 'r');
 xlim([eps_gaps(end), eps_gaps(1)]);
+ylim([10^{-1},10^1]);
 lgd = legend('2-osc. phase model', '2-module NM model');
 lgd.Position = [ 0.5644    0.4358    0.3400    0.1060];
 set(gca,'FontSize',30); set(gcf, 'Position', [1    59   853   646]);
-saveas(fig6,'figs/2osc_phases_neural_longwavelength.png');
+% saveas(fig6,'figs/2osc_phases_neural_longwavelength.png');
 
+return
 %make plot of G-fns for various eps_g
 fig9=figure(9); clf;  
 g=eps_prop*h1p/t_n + m_strength*g_mech + eps_gaps(end)*g_gap/t_n;

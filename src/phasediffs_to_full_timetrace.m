@@ -23,7 +23,7 @@ end
 phis = mod(phis,1); %make sure phase goes from 0 to 0.9999
 thetas = mod([0; cumsum(phis);],1); %turn phase differences into phases
 
-X = zeros(4*dim+gridsz*dim,10*period/dt); %allocate space
+X = zeros(4*dim+gridsz*dim,round(10*period/dt)); %allocate space
 for jj=1:4
     for kk = 1:dim
     %For oscillator kk, set state varitable jj+1 according to the given 

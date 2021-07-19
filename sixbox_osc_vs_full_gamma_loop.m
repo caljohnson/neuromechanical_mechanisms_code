@@ -207,9 +207,9 @@ load('sixbox_osc_vs_full_gamma_loop_data.mat');
 load('colorblind_colormap.mat')
 fig=figure(2); clf;
 colors = colorblind([1 2 6 7 8],:,:);
-h = semilogx(little_gamma,mod(phase_model_eq2,1),'o-','LineWidth',2,'MarkerSize',10); hold on;
+h = semilogx(little_gamma,mod(phase_model_eq2,1),'o-','LineWidth',4,'MarkerSize',20); hold on;
 set(h, {'color'}, num2cell(colors,2));
-h2 = semilogx(little_gamma,mod(plstate2,1),'+','LineWidth',2,'MarkerSize',10);
+h2 = semilogx(little_gamma,mod(plstate2,1),'s','LineWidth',2,'MarkerSize',15);
 set(h2, {'color'}, num2cell(colors,2));
 % xlabel('External Fluid Viscosity \gamma (mPa \cdot s)'); 
 ylabel({['pairwise'] ['phase difference']});
@@ -225,9 +225,9 @@ text(3.5*10^4,0.825,'\phi_5', 'FontSize',30,'Color',colors(5,:,:));
 %turn into wavelength
 wvln2 = 1./((6/5)*sum(1-mod(phase_model_eq2,1),2));
 figure(1); clf; str1=['\epsilon_{g} = ' num2str(eps_gap) ' and \epsilon_{p} = ' num2str(eps_prop)];
-semilogx(little_gamma,wvln2,'o-','LineWidth',2,'MarkerSize',10); hold on;
+semilogx(little_gamma,wvln2,'o-','LineWidth',4,'MarkerSize',20); hold on;
 wvlns_full2 = 1./((6/5)*sum(1-mod(plstate2,1),2));
-semilogx(little_gamma,wvlns_full2,'+','LineWidth',2,'MarkerSize',10);
+semilogx(little_gamma,wvlns_full2,'s','LineWidth',4,'MarkerSize',15);
 xlabel('External Fluid Viscosity \mu_f (mPa s)'); 
 ylabel({['wavelengths'], ['(\lambda/L)']});
 set(gca,'FontSize',30); %title(str1);

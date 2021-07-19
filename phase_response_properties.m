@@ -123,7 +123,7 @@ plot(theta(intersect(pl_state_inds, stab_state_inds)),...
     'Markersize',20, 'MarkerFaceColor', 'k');
 plot([0,1],[0,0],'k:','linewidth',2); 
 xlabel('phase \phi');  ylim([-1 1]); ylabel('G_p(\phi)'); set(gca,'FontSize',30)
-
+return
 %save Z for comparisons later
 Z2 = Z;
 %--------------------------------------------------------------------
