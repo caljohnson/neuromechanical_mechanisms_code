@@ -26,10 +26,10 @@ Carter L. Johnson, Timothy J. Lewis, and Robert D. Guy (2021), "Neuromechanical 
 ## src codes
 
 ### Model Codes
-* full_state_model_odes.m - function that generates ODEs for the forward locomotion system (n neuromechanical modules)
-  * full_state_model_odes_backwardsprop.m - same as full_state_model_odes.m but with opposite-direction and signed proprioception
+* full_state_model_odes.m - function that generates ODEs for the forward locomotion system (dim neuromechanical modules)
+  * full_state_model_odes_backwardsprop.m - same as above but with opposite-direction and signed proprioception
 * coupled_oscillator_phase_difference_odes.m - function that generates phase-equation ODEs for the forward locomotion system (n oscillators)
-   * coupled_oscillator_phase_difference_odes_backwardsprop.m - same as coupled_oscillator_phase_difference_odes.m but with opposite-direction and signed proprioception
+   * coupled_oscillator_phase_difference_odes_backwardsprop.m - same as above but with opposite-direction and signed proprioception
 * coup_currents_and_oscillator_coupling_fns.m / oscillator_coupling_fns.m - computes the coupling functions for the full coupled system from the single oscillator limit cycle and PRC
 * single_oscillator_LC.m - computes the limit cycle oscillations for the single (uncoupled) neuromechanical module
 *  single_oscillator_Eulerstep.m - gives an Euler's-method solution step for the single (uncoupled) neuromechanical module
@@ -39,7 +39,7 @@ Carter L. Johnson, Timothy J. Lewis, and Robert D. Guy (2021), "Neuromechanical 
 * full_timetrace_to_phasediffs.m - computes phase-differences between each oscillator module in the full-state model over time from states
 * phasediffs_to_full_timetrace.m -  computes time-trace for the full state model from a vector of phase-locked phase differences between each oscillator module
 * phases_to_init_cond.m - creates an initial condition for the full state model from a vector of initial phase differences between each oscillator module
-* phase_locked_state_solve.m - solves for the phase-locked phase-differences of the full model using the phase model ODES (up to 4 modules)
+* phase_locked_state_solve.m - solves for the phase-locked phase-differences of the full model using the phase model ODES (up to dim=4 modules)
  
 
 ### Figures/Plot Codes
