@@ -56,6 +56,7 @@ Carter L. Johnson, Timothy J. Lewis, and Robert D. Guy (2021), "Neuromechanical 
 
 <details>
  <summary>Summary of src Codes</summary>
+ 
 ### Model Codes
 * full_state_model_odes.m - function that generates ODEs for the forward locomotion system (dim neuromechanical modules)
   * full_state_model_odes_backwardsprop.m - same as above but with opposite-direction and signed proprioception
