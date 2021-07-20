@@ -1,8 +1,8 @@
 # MATLAB Code for two publications:
 
-Carter L. Johnson (2020) "Neuromechanical Mechanisms of Locomotion in C. elegans" Ph.D. Dissertation, UC Davis. DOI: 10.13140/RG.2.2.24387.02082
+Carter L. Johnson (2020) "Neuromechanical Mechanisms of Locomotion in C. elegans" Ph.D. Dissertation, UC Davis. [DOI: 10.13140/RG.2.2.24387.02082](https://www.researchgate.net/publication/344618740_Neuromechanical_Mechanisms_of_Locomotion_in_C_elegans)
 
-Carter L. Johnson, Timothy J. Lewis, and Robert D. Guy (2021), "Neuromechanical Mechanisms of Gait Adaptation in C. elegans: Relative Roles of Neural and Mechanical Coupling", SIAM Journal on Applied Dynamical Systems. DOI: 10.1137/20M1346122
+Carter L. Johnson, Timothy J. Lewis, and Robert D. Guy (2021), "Neuromechanical Mechanisms of Gait Adaptation in C. elegans: Relative Roles of Neural and Mechanical Coupling", SIAM Journal on Applied Dynamical Systems. [DOI: 10.1137/20M1346122](https://www.researchgate.net/publication/342302425_Neuromechanical_Mechanisms_of_Gait_Adaptation_in_textitC_Elegans_Relative_Roles_of_Neural_and_Mechanical_Coupling)
 
 ## Folders
 
