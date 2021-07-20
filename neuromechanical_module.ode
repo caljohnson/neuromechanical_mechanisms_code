@@ -1,0 +1,29 @@
+# Neuromechanical Module Model
+#  
+# Declare the parameters
+# neural, muscular, and physical timescales
+p t_n = 0.01, t_m = 0.1, t_f=0.5,
+p I = 0, Cm=10, a=1, Cp = 1
+
+  
+# define the right-hand sides
+VV' = (1/t_n)*(VV - a*(VV)^3 + I - Cp*K)
+VD' = (1/t_n)*(VD - a*(VD)^3 + I + Cp*K)
+AV' = (1/t_m)*(-AV + VV - VD)
+AD' = (1/t_m)*(-AD + VD - VV)
+K' = (1/t_f)*(-K + Cm/2*(tanh(AV-2)-tanh(AD-2)))
+
+# some initial conditions -- not necessary but for completeness
+VV(0)=1
+VD(0)=0
+AV(0)=0
+AD(0)=0 
+K(0)=0
+
+@ total=200,meth=euler
+@ BELL=0
+@ xp=T,yp=K,xlo=0,xhi=5,ylo=-5,yhi=5
+@ dt=1e-3
+
+# Done!!
+d

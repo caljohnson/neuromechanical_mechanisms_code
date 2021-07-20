@@ -14,6 +14,7 @@ mu_f = 0;
 CN = (3.4*1e-9)*mu_f;
 
 plstate = zeros(size(eps_gaps,2),dim-1)
+tic
 for kk = 1:size(eps_gaps,2)
  
 %make init cond
@@ -78,16 +79,16 @@ end
 load('colorblind_colormap.mat');
 
 
-% fig2 = figure(2); clf;
-% colors = colorblind([1 2 6 7 8],:,:);
-% h = plot(eps_gaps, plstate,'o-','LineWidth',2,'MarkerSize',10); hold on;
-% set(h, {'color'}, num2cell(colors,2));
-% ylabel({['pairwise'] ['phase difference']});
-% ylim([0.5 1]); xlabel('gap-junctional coupling strength \epsilon_g');
-% text(0.51,mod(plstate(end,1),1)-.02,'\phi_1', 'FontSize',30,'Color',colors(1,:,:));
-%     text(0.51, mod(plstate(end,2),1),'\phi_2', 'FontSize',30,'Color',colors(2,:,:));
-%     text(0.51, mod(plstate(end,3),1),'\phi_3', 'FontSize',30,'Color',colors(3,:,:));
-%     text(0.51,mod(plstate(end,4),1),'\phi_4', 'FontSize',30,'Color',colors(4,:,:));
-%     text(0.51,mod(plstate(end,5),1),'\phi_5', 'FontSize',30,'Color',colors(5,:,:));
-% set(gca,'FontSize',30); title('\mu_f = 0');
+fig2 = figure(2); clf;
+colors = colorblind([1 2 6 7 8],:,:);
+h = plot(eps_gaps, plstate,'o-','LineWidth',2,'MarkerSize',10); hold on;
+set(h, {'color'}, num2cell(colors,2));
+ylabel({['pairwise'] ['phase difference']});
+ylim([0.5 1]); xlabel('gap-junctional coupling strength \epsilon_g');
+text(0.51,mod(plstate(end,1),1)-.02,'\phi_1', 'FontSize',30,'Color',colors(1,:,:));
+    text(0.51, mod(plstate(end,2),1),'\phi_2', 'FontSize',30,'Color',colors(2,:,:));
+    text(0.51, mod(plstate(end,3),1),'\phi_3', 'FontSize',30,'Color',colors(3,:,:));
+    text(0.51,mod(plstate(end,4),1),'\phi_4', 'FontSize',30,'Color',colors(4,:,:));
+    text(0.51,mod(plstate(end,5),1),'\phi_5', 'FontSize',30,'Color',colors(5,:,:));
+set(gca,'FontSize',30); title('\mu_f = 0');
   
